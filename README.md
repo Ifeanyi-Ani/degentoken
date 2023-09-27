@@ -1,41 +1,45 @@
-# Project Title
+# DegenToken Smart Contract Deployment
 
-Simple overview of use/purpose.
+This repository contains a set of scripts and a Solidity smart contract for deploying and interacting with the DegenToken smart contract on the Ethereum blockchain. DegenToken is an ERC-20 token with additional functionality for setting item costs, redeeming items, and tracking player items.
 
-## Description
+## Prerequisites
 
-An in-depth paragraph about your project and overview of use.
+Before using these scripts, make sure you have the following installed:
+
+- Node.js and npm: [Download Here](https://nodejs.org/)
+- Hardhat: A development environment for Ethereum. Install it globally using npm: `npm install -g hardhat`
 
 ## Getting Started
 
-### Installing
+1. Clone this repository to your local machine:
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+   ```
+   git clone https://github.com/Ifeanyi-Ani/degentoken.git
+   cd degentoken
+   ```
 
-### Executing program
+2. Install project dependencies:
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+   ```
+   npm install
+   ```
 
-## Help
+3. Configure your Ethereum network settings in the `hardhat.config.js` file. You can specify the network, provider URL, and other settings as needed.
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+4. Deploy the DegenToken smart contract by running the deployment script:
 
-## Authors
+   ```
+   npx hardhat run scripts/deploy.js
+   ```
 
-Contributors names and contact info
+   This will compile the smart contract, deploy it to the specified network, and display the contract's address in the console.
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+5. You can also interact with the deployed contract using the provided scripts or by creating your own Ethereum applications.
 
+## Script Descriptions
 
-## License
+- `scripts/deploy.js`: Deploys the DegenToken smart contract to the Ethereum network specified in `hardhat.config.js`.
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+## Usage
+
+You can customize and extend the provided scripts and smart contract according to your project's requirements. The DegenToken contract provides methods for minting, burning, setting item costs, redeeming items, transferring tokens, and more.
